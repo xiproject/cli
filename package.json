@@ -1,0 +1,23 @@
+{
+  "name": "cli",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "lodash": "^3.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xiproject/cli.git"
+  },
+  "author": "Vikrant Varma <vikrant.varma94@gmail.com>",
+  "license": "GPLv3",
+  "bugs": {
+    "url": "https://github.com/xiproject/cli/issues"
+  },
+  "homepage": "https://github.com/xiproject/cli"
+}

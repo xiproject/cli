@@ -25,8 +25,8 @@ xal.on('xi.event.output.text', function(state, done) {
         return memo || dest.value;
     }, false);
 
-    console.log('\n<<< ', state.get('xi.event.id'), ': ', value);
-    rl.prompt();
+    rl.write('\n<<< ' + state.get('xi.event.id') + ': ' + value + '\n');
+    rl.prompt(true);
 });
 
 xal.on('xi.event.input.text', function(state, done) {
@@ -34,7 +34,8 @@ xal.on('xi.event.input.text', function(state, done) {
         return memo || dest.value;
     }, false);
 
-    console.log(state.get('xi.event.id'), ' >>> ', value);
+    rl.write('\n' + state.get('xi.event.id') + ' >>> ' + value + '\n');
+    rl.prompt(true);
 });
 
 
