@@ -8,6 +8,9 @@ var rl = readline.createInterface({
     output: process.stdout
 });
 
+// clear line assuming 80 character wide terminal
+var cl = '\r' + Array(80).join(' ') + '\r';
+
 rl.on('line', function (message) {
     if (message.trim().length === 0) {
         rl.prompt();
@@ -25,7 +28,7 @@ xal.on('xi.event.output.text', function(state, done) {
         return memo || dest.value;
     }, false);
 
-    rl.write('\n<<< ' + state.get('xi.event.id') + ': ' + value + '\n');
+    console.log(cl + '<<< ' + state.get('xi.event.id') + ': ' + value);
     rl.prompt(true);
 });
 
@@ -34,7 +37,7 @@ xal.on('xi.event.input.text', function(state, done) {
         return memo || dest.value;
     }, false);
 
-    rl.write('\n' + state.get('xi.event.id') + ' >>> ' + value + '\n');
+    console.log(cl + state.get('xi.event.id') + ' >>> ' + value);
     rl.prompt(true);
 });
 
